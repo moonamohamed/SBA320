@@ -12,4 +12,17 @@ const jokeSlice = createSlice({
         joke: '',
         status: 'idle',
     },
-})
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+        .addCase(fetchJoke.pending, (state) => {
+            state.status = 'loading';
+        })
+        .addCase(fetchJoke.fulfilled, (state, action) => {
+            state.status = 'succeeded';
+            state.joke = action.payload;
+        });
+    },
+});
+
+export default jokeSlice.reducer;
