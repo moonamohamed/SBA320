@@ -1,4 +1,4 @@
-import JokeDisplay from "./components/JokeDisplay";
+import JokeDisplay from "./components/jokeDisplay";
 import { useEffect } from "react";
 import FunnyJokes from './assets/funnyjokes.png';
 import FunnyMeme from './assets/funnymeme.png';
